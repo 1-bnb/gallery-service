@@ -107,5 +107,5 @@ var generateImageArray = (count) => {
 }
 
 
-generateImage(20000);
+generateImage(2000);
 generateProperty(100);
