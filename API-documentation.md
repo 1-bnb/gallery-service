@@ -1,7 +1,7 @@
 ## Server API
 
 ### Get property info
-  * GET `/api/properties/id`
+  * GET `/api/properties/:id`
 
 **Path Parameters:**
   * `id` property id
@@ -12,7 +12,7 @@
 
 ```json
     {
-        "_id": "Number",
+        // "_id": "Number",
         "description": "String",
         "starRating": "Number",
         "reviewTotal": "Number",
@@ -20,60 +20,24 @@
         "location": "String",
         "images": [
           {
-            "id": "Number",
+            // "property_id": "Number",
             "imageURL": "String",
             "description": "String"
           },
           {
-            "id": "Number",
+            // "property_id": "Number",
             "imageURL": "String",
             "description": "String"
           },
           {
-            "id": "Number",
-            "imageURL": "String",
-            "description": "String"
-          },
-          {
-            "id": "Number",
-            "imageURL": "String",
-            "description": "String"
-          },
-          {
-            "id": "Number",
-            "imageURL": "String",
-            "description": "String"
-          },
-          {
-            "id": "Number",
-            "imageURL": "String",              "description": "String"
-          },
-          {
-            "id": "Number",
-            "imageURL": "String",
-            "description": "String"
-          },
-          {
-            "id": "Number",
-            "imageURL": "String",
-            "description": "String"
-          },
-          {
-            "id": "Number",
-            "imageURL": "String",
-            "description": "String"
-          },
-          {
-            "id": "Number",
-            "imageURL": "String",
-            "description": "String"
+            "..."
           }
-          ],
+                  ],
     }
 ```
 
 ### Add property
-  * POST `/api/properties/id`
+  * POST `/api/properties/`
 
 **Success Status Code:** `201`
 
@@ -81,7 +45,7 @@
 
 ```json
     {
-        "_id": "Number",
+        // "_id": "Number",
         "description": "String",
         "starRating": "Number",
         "reviewTotal": "Number",
@@ -89,51 +53,51 @@
         "location": "String",
         "images": [
           {
-            "id": "Number",
+            // "property_id": "Number",
             "imageURL": "String",
             "description": "String"
           },
           {
-            "id": "Number",
+            // "property_id": "Number",
             "imageURL": "String",
             "description": "String"
           },
           {
-            "id": "Number",
+            // "property_id": "Number",
             "imageURL": "String",
             "description": "String"
           },
           {
-            "id": "Number",
+            // "property_id": "Number",
             "imageURL": "String",
             "description": "String"
           },
           {
-            "id": "Number",
+            // "property_id": "Number",
             "imageURL": "String",
             "description": "String"
           },
           {
-            "id": "Number",
+            // "property_id": "Number",
             "imageURL": "String",              "description": "String"
           },
           {
-            "id": "Number",
+            // "property_id": "Number",
             "imageURL": "String",
             "description": "String"
           },
           {
-            "id": "Number",
+            // "property_id": "Number",
             "imageURL": "String",
             "description": "String"
           },
           {
-            "id": "Number",
+            // "property_id": "Number",
             "imageURL": "String",
             "description": "String"
           },
           {
-            "id": "Number",
+            // "property_id": "Number",
             "imageURL": "String",
             "description": "String"
           }
@@ -143,10 +107,10 @@
 
 
 ### Update property info
-  * PATCH `/api/restaurant/:id`
+  * PATCH `/api/properties/:id`
 
 **Path Parameters:**
-  * `id` restaurant id
+  * `id` property id
 
 **Success Status Code:** `204`
 
@@ -155,12 +119,8 @@
 ```json
     {
         "description": "String",
-        "starRating": "Number",
-        "reviewTotal": "Number",
-        "superhost": "Boolean",
         "images": [
                     {
-                      "id": "Number",
                       "imageURL": "String",
                       "description": "String"
                     }
@@ -169,9 +129,9 @@
 ```
 
 ### Delete property
-  * DELETE `/api/properties/id`
+  * DELETE `/api/properties/:id`
 
 **Path Parameters:**
-  * `id` restaurant id
+  * `id` property id
 
 **Success Status Code:** `204`
