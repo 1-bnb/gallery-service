@@ -1,7 +1,9 @@
 const fs = require('fs');
 var imageurls = ['link1', 'link2', 'link3', 'link4', 'link5', 'link6', 'link7', 'link8', 'link9', 'link10', 'link11', 'link12', 'link13', 'link14', 'link15', 'link16', 'link17', 'link18', 'link19', 'link20'];
 var imageDescriptions = ['exterior', 'exterior', 'exterior', 'living room', 'living room', 'dining room', 'dining room', 'dining room', 'kitchen', 'kitchen', 'bathroom', 'bedroom 1', 'bedroom 1', 'bedroom 1', 'hallway', 'bedroom 2', 'bedroom 2', 'bathroom', 'patio', 'backyard'];
-
+var cities = ['Los Angeles', 'San Diego', 'San Jose', 'San Francisco', 'Fresno', 'Sacramento', 'Long Beach', 'Oakland', 'Bakersfield', 'Anaheim', 'Santa Ana', 'Riverside', 'Stockton', 'Irvine'];
+var adjectives = ['Big', 'Beautiful', 'Comfortable', 'Cozy', 'Huge', 'Small', 'Quaint'];
+var homeTypes = ['home', 'apartment', 'condo']
 
 var imageObjects = [];
 
@@ -61,16 +63,10 @@ var writeMongoProperty = (property) => {
 
 //property object generator helpers
 var generateCity = (count) => {
-  var cities = ['Los Angeles', 'San Diego', 'San Jose', 'San Francisco', 'Fresno', 'Sacramento', 'Long Beach', 'Oakland', 'Bakersfield', 'Anaheim', 'Santa Ana', 'Riverside', 'Stockton', 'Irvine'];
-
   return cities[count % cities.length];
 }
 
 var generateDescription = (count, city) => {
-  var adjectives = ['Big', 'Beautiful', 'Comfortable', 'Cozy', 'Huge', 'Small', 'Quaint'];
-
-  var homeTypes = ['home', 'apartment', 'condo']
-
   return `${adjectives[count % adjectives.length]} ${city} ${homeTypes[count % homeTypes.length]}`;
 }
 
