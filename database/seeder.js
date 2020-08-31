@@ -1,4 +1,8 @@
 const fs = require('fs');
+var imageurls = ['link1', 'link2', 'link3', 'link4', 'link5', 'link6', 'link7', 'link8', 'link9', 'link10', 'link11', 'link12', 'link13', 'link14', 'link15', 'link16', 'link17', 'link18', 'link19', 'link20'];
+var imageDescriptions = ['exterior', 'exterior', 'exterior', 'living room', 'living room', 'dining room', 'dining room', 'dining room', 'kitchen', 'kitchen', 'bathroom', 'bedroom 1', 'bedroom 1', 'bedroom 1', 'hallway', 'bedroom 2', 'bedroom 2', 'bathroom', 'patio', 'backyard'];
+
+
 var imageObjects = [];
 
 //image object generator
@@ -17,15 +21,11 @@ var generateImage = (count) => {
 
 //image object generator helpers
 var generateImageURL = (count) => {
-  var imageurls = ['link1', 'link2', 'link3', 'link4', 'link5', 'link6', 'link7', 'link8', 'link9', 'link10', 'link11', 'link12', 'link13', 'link14', 'link15', 'link16', 'link17', 'link18', 'link19', 'link20'];
-
   return imageurls[(count - 1) % imageurls.length];
 }
 
 var generateImageDescription = (count) => {
-  var imageDescriptions = ['exterior', 'exterior', 'exterior', 'living room', 'living room', 'dining room', 'dining room', 'dining room', 'kitchen', 'kitchen', 'bathroom', 'bedroom 1', 'bedroom 1', 'bedroom 1', 'hallway', 'bedroom 2', 'bedroom 2', 'bathroom', 'patio', 'backyard'];
-
-  return imageDescriptions[count % imageDescriptions.length];
+return imageDescriptions[count % imageDescriptions.length];
 }
 
 //property object generator
