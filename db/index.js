@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/airbnb-gallery', {
+mongoose.connect('mongodb://student:student@54.153.101.30/gallery', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -9,7 +9,7 @@ mongoose.connect('mongodb://localhost/airbnb-gallery', {
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
-  console.log('connected to mongodb://localhost/airbnb-gallery');
+  console.log('connected to mongodb://localhost/gallery');
 });
 
 

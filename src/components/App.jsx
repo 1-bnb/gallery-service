@@ -26,10 +26,10 @@ export default () => {
 
   let getHouse = () => {
     let id = window.location.pathname.split('/')[2];
-    console.log(id)
     axios.get(`/properties/${id}`)
       .then((house) => {
         let houseInfo = house.data[0];
+        console.log(houseInfo);
         setSuperhost(houseInfo.superhost);
         setHome(houseInfo);
         let arrayImages = [
